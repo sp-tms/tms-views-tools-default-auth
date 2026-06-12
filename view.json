@@ -12,20 +12,21 @@
 		"core" : 
 		{
 			"name" : "Core",
-			"version" : "0.0.0-rc.8",
+			"version" : "0.0.0-rc.15",
 			"repo" : "https://github.com/sp-framework/core"
 		},
 		"apptype" : 
 		{
-			"name" : "Tms",
-			"version" : "0.3.0",
+			"name" : "Transport Management System",
+			"version" : "0.0.0",
 			"repo" : "https://github.com/sp-tms/tms"
 		},
+		"packages" : [],
 		"views" : 
 		[
 			{
 				"name" : "Default",
-				"version" : "0.10.0",
+				"version" : "0.2.0",
 				"repo" : "https://github.com/sp-tms/tms-views-tools-default"
 			}
 		]
