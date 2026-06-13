@@ -12,7 +12,11 @@ BazCore.header({
     <div class="card m-0">
         <div class="card-body login-card-body">
             <div class="login-logo">
-                <img src="{{links.images(assets.get('branding').getCodes()[3].getContent())}}" data-rjs="3" alt="Bazaari Logo" style="height:{{assets.get('branding').getCodes()[5].getContent()}}px">
+                {% if str_starts_with(assets.get('branding').getCodes()[3].getContent(), 'public') %}
+                    <img src="{{str_replace('public/', '', links.url(assets.get('branding').getCodes()[3].getContent(), true))}}" data-rjs="3" alt="Bazaari Logo" style="height:90px">
+                {% else %}
+                    <img src="{{links.images(assets.get('branding').getCodes()[3].getContent())}}" data-rjs="3" alt="Bazaari Logo" style="height:90px">
+                {% endif %}
             </div>
             <div id="{{componentId}}-regular" hidden>
                 <p class="login-box-msg text-sm font-weight-bold">Login to start {{appName|lower}} session</p>
