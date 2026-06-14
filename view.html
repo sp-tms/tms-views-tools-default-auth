@@ -12,8 +12,11 @@ BazCore.header({
     <div class="card m-0">
         <div class="card-body login-card-body">
             <div class="login-logo">
-                {% set orgFileName = assets.get('branding').getCodes()[1].getAttributes()['org_file_name'] %}
-                {% set orgFileUUID = links.url(assets.get('branding').getCodes()[1].getContent(), true) %}
+                {% if str_contains(assets.get('branding').getCodes()[1].getContent(), 'images') %}
+                    {% set orgFileUUID = links.url(assets.get('branding').getCodes()[1].getContent(), true) %}
+                {% else %}
+                    {% set orgFileUUID = links.images(assets.get('branding').getCodes()[1].getContent(), true) %}
+                {% endif %}
                 {% if str_starts_with(assets.get('branding').getCodes()[1].getContent(), 'public') %}
                     {% set orgFileUUID = str_replace('public/', '', orgFileUUID) %}
                 {% endif %}
@@ -38,9 +41,9 @@ BazCore.header({
                 {% endfor %}
                 {% set srcset = srcset ~ '"' %}
                 {% if str_starts_with(assets.get('branding').getCodes()[1].getContent(), 'public') %}
-                    <img src="{{str_replace('public/', '', links.url(assets.get('branding').getCodes()[1].getContent(), true))}}" {{srcset}} alt="Logo" style="height:90px">
+                    <img src="{{str_replace('public/', '', links.images(assets.get('branding').getCodes()[1].getContent(), true))}}" {{srcset}} alt="Logo" style="height:90px">
                 {% else %}
-                    <img src="{{links.images(assets.get('branding').getCodes()[1].getContent())}}" {{srcset}} alt="Logo" style="height:90px">
+                    <img src="{{links.url(assets.get('branding').getCodes()[1].getContent())}}" {{srcset}} alt="Logo" style="height:90px">
                 {% endif %}
             </div>
             <div id="{{componentId}}-regular" hidden>
