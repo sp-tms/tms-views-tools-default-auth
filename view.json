@@ -1,77 +1,77 @@
 {
-    "name" : "Auth",
-    "display_name" : "Tms Auth View",
-    "description" : "<p>Tms Auth View<br></p>",
-    "module_type" : "views",
-    "app_type" : "tms",
-    "category" : "tools",
-    "version" : "0.7.0",
-    "repo" : "https://github.com/sp-tms/tms-views-tools-default-auth",
-    "dependencies" :
-    {
-        "core" :
-        {
-            "name" : "Core",
-            "version" : "0.0.0-rc.15",
-            "repo" : "https://github.com/sp-framework/core"
-        },
-        "apptype" :
-        {
-            "name" : "Transport Management System",
-            "version" : "0.0.0",
-            "repo" : "https://github.com/sp-tms/tms"
-        },
-        "packages" : [],
-        "views" :
-        [
-            {
-                "name" : "Default",
-                "version" : "0.7.0",
-                "repo" : "https://github.com/sp-tms/tms-views-tools-default"
-            }
-        ]
-    },
-    "is_subview" : true,
-    "settings" : 
-    {
-        "head" : 
-        {
-            "link" : 
-            {
-                "href" : 
-                {
-                    "assets" : 
-                    {
-                        "dev" : [],
-                        "prod" : []
-                    }
-                }
-            },
-            "script" : 
-            {
-                "src" : 
-                {
-                    "assets" : 
-                    {
-                        "dev" : [],
-                        "prod" : []
-                    }
-                }
-            }
-        },
-        "footer" : 
-        {
-            "script" : 
-            {
-                "src" : 
-                {
-                    "assets" : 
-                    {
-                        "dev" : [],
-                        "prod" : []
-                    }
-                }
-            }
-        }
-    }
+	"name" : "Auth",
+	"display_name" : "Tms Auth View",
+	"description" : "<p>Tms Auth View<br></p>",
+	"module_type" : "views",
+	"app_type" : "tms",
+	"category" : "tools",
+	"version" : "0.8.0",
+	"repo" : "https://github.com/sp-tms/tms-views-tools-default-auth",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.15",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"apptype" : 
+		{
+			"name" : "Transport Management System",
+			"version" : "0.0.0",
+			"repo" : "https://github.com/sp-tms/tms"
+		},
+		"packages" : [],
+		"views" : 
+		[
+			{
+				"name" : "Default",
+				"version" : "0.7.0",
+				"repo" : "https://github.com/sp-tms/tms-views-tools-default"
+			}
+		]
+	},
+	"is_subview" : true,
+	"settings" : 
+	{
+		"head" : 
+		{
+			"link" : 
+			{
+				"href" : 
+				{
+					"assets" : 
+					{
+						"dev" : [],
+						"prod" : []
+					}
+				}
+			},
+			"script" : 
+			{
+				"src" : 
+				{
+					"assets" : 
+					{
+						"dev" : [],
+						"prod" : []
+					}
+				}
+			}
+		},
+		"footer" : 
+		{
+			"script" : 
+			{
+				"src" : 
+				{
+					"assets" : 
+					{
+						"dev" : [],
+						"prod" : []
+					}
+				}
+			}
+		}
+	}
 }
